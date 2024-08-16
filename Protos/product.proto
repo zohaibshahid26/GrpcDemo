@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo";
+
+service Products
+{
+  rpc AddProduct(AddProductRequest) returns (AddProductResponse) {}
+  rpc GetProduct(GetProductRequest) returns (GetProductResponse) {}
+  rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse) {}
+  rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse) {}
+  rpc GetAllProduct(GetAllProductRequest) returns (GetAllProductResponse) {}
+}
+
+
+message AddProductRequest 
+{
+  string Name = 1;
+  double Price = 2;
+  int32 Qty = 3;
+}
+
+message AddProductResponse
+{
+  string Id = 1;
+}
+
+message GetProductRequest 
+{
+  string Id = 1;
+}
+
+message GetProductResponse
+{
+  string Id = 1;
+  string Name = 2;
+  double Price = 3;
+  int32 Qty = 4;
+
+}
+
+message UpdateProductRequest 
+{
+  string Id = 1;
+  string Name = 2;
+  double Price = 3;
+  int32 Qty = 4;
+}
+
+message UpdateProductResponse
+{
+  string Id = 1;
+}
+
+message DeleteProductRequest
+{
+  string Id = 1;
+}
+
+message DeleteProductResponse
+{
+  string Id = 1;
+}
+
+message GetAllProductRequest
+{
+}
+
+message GetAllProductResponse
+{
+  repeated GetProductResponse Products = 1;
+}
