@@ -1,9 +1,10 @@
-﻿using GrpcDemo.Model;
-using GrpcDemo.Data;
+﻿using gRPC_for_ASPNET_CORE.Model;
 using Grpc.Core;
 using Microsoft.EntityFrameworkCore;
+using GrpcDemo;
+using gRPC_for_ASPNET_CORE.Data;
 
-namespace GrpcDemo.Services
+namespace gRPC_for_ASPNET_CORE.Services
 {
     public class ProductsService : Products.ProductsBase
     {

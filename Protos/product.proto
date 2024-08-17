@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-option csharp_namespace = "GrpcDemo";
+option csharp_namespace = "gRPC_for_ASPNET_CORE";
 import "google/api/annotations.proto";
 
-package grpcdemo;
+package gRPC_for_ASPNET_CORE;
 service Products
 {
   rpc AddProduct(AddProductRequest) returns (AddProductResponse)

@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace GrpcDemo.Model
+namespace gRPC_for_ASPNET_CORE.Model
 {
     public class Product
     {

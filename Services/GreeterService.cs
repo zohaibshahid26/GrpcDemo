@@ -1,7 +1,7 @@
 using Grpc.Core;
 using GrpcDemo;
 
-namespace GrpcDemo.Services
+namespace gRPC_for_ASPNET_CORE.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {

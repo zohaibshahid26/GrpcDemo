@@ -1,5 +1,5 @@
-using GrpcDemo.Data;
-using GrpcDemo.Services;
+using gRPC_for_ASPNET_CORE.Data;
+using gRPC_for_ASPNET_CORE.Services;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.

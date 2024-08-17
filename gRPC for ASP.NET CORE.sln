@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcDemo", "GrpcDemo.csproj", "{B6FF6050-44EC-45D8-A1A9-AF5783777498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gRPC for ASPNET CORE", "gRPC for ASPNET CORE.csproj", "{B6FF6050-44EC-45D8-A1A9-AF5783777498}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
