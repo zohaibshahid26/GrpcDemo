@@ -1,14 +1,44 @@
 syntax = "proto3";
 
 option csharp_namespace = "GrpcDemo";
+import "google/api/annotations.proto";
 
+package grpcdemo;
 service Products
 {
-  rpc AddProduct(AddProductRequest) returns (AddProductResponse) {}
-  rpc GetProduct(GetProductRequest) returns (GetProductResponse) {}
-  rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse) {}
-  rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse) {}
-  rpc GetAllProduct(GetAllProductRequest) returns (GetAllProductResponse) {}
+  rpc AddProduct(AddProductRequest) returns (AddProductResponse)
+  {
+	  option (google.api.http) = {
+		post: "/api/products",
+		body: "*"
+	  };
+  }
+  rpc GetProduct(GetProductRequest) returns (GetProductResponse)
+  {
+	  option (google.api.http) = {
+		get: "/api/products/{Id}"
+	  };
+  }
+  rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse)
+  {
+	  option (google.api.http) = {
+		put: "/api/products/{Id}",
+		body: "*" 
+	  };
+  }
+  rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse)
+  {
+	  option (google.api.http) = {
+		delete: "/api/products/{Id}"
+
+	  };
+  }
+  rpc GetAllProduct(GetAllProductRequest) returns (GetAllProductResponse)
+  {
+	  option (google.api.http) = {
+		get: "/api/products"
+	  };
+  }
 }
 
 
@@ -35,7 +65,6 @@ message GetProductResponse
   string Name = 2;
   double Price = 3;
   int32 Qty = 4;
-
 }
 
 message UpdateProductRequest 
